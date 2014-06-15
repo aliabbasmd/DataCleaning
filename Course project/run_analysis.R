@@ -1,7 +1,7 @@
 #set working directory
 setwd("c:\\data")
 #download data file
-fileurl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+fileurl<-"http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileurl,"uhcdata.zip")
 
 #capture the date on which the file is downloaded
@@ -58,6 +58,8 @@ traindf<-cbind(subject_train,X_train,Y_train)
 
 
 #Create two separate data frames for the test ant train groups and then merge them using merge
+testdf1<-testdf
+traindf1<-traindf
 names(testdf1)[names(testdf1) == 'subjecttest'] <- 'subject'
 names(traindf1)[names(traindf1) == 'subjecttrain'] <- 'subject'
 traindf1$subject <- row.names(traindf1)
