@@ -65,53 +65,12 @@ These columns are subject, activity, variable and value.
 The names subjecttest and subjecttrain were renamed at this time to subject
 
 Means and standard deviation were calculated using the ddply function
+The data were subgrouped by subject and then activity and mean and sd were calculated for each group individually
 The data frame meanstest has 5 columns and 4212 rows whilst meanstrain has 5 columns and 9828 rows
 
 These columns in meanstest include object, activity, variable, mean and sd
 The data frame meanstrain has the same columns
 
+Data frame final was created using rbind to bind meanstest and meanstrain. It has 5 variable and 14040 rows
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Finally write.table was used to create a tab separated tidy.txt file
